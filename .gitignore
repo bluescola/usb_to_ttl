@@ -1,0 +1,6 @@
+# Altium Designer files
+history/
+_previews/
+*.bak
+*.log
+*.tmp
