@@ -1,0 +1,10 @@
+Output: PCADnlt Netlist
+Type  : PCADnltNetlist
+From  : Project [usb_to_ttl.PrjPcb]
+   Generated File[usb_to_ttl.NET]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 19:55:07 On 2025/8/31

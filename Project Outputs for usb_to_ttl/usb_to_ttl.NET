@@ -1,0 +1,45 @@
+BOARD = PROTEL.PCB;
+
+
+PARTS
+CAP-0402        = C1;   % 100nF
+CAP-0402        = C2;   % 100nF
+CAP-0603        = C3;   % 10uf
+CAP-0402        = C4;   % 100nF
+CAP-0402        = C5;   % 100nf 10v
+HDR-TH-4P-P2.54-H-M= CN1;  % 4P排针 2.54mm 弯插 公座
+SOD-323         = D1;   % 1N5819WS
+F0603           = F1;   % MF-FSMF050X-21_MF-FSMF050X-2
+LED-D5          = LED1; % LED_BLUE
+LED-0603        = LED2; % LED_RED
+LED-0603        = LED3; % LED_GREEN
+RES-0603        = R1;   % 270Ω 1/4W
+RES-0805        = R2;   % 120Ω 1/8W
+RES-0805        = R3;   % 150Ω 1/8W
+RES-0805        = R4;   % 120Ω 1/8W
+RES-0603        = R5;   % 280Ω 1/4W
+KFC5858-Z       = S1;   % SW-TH_6P-L5.8-W5.8-P2.00-LS4.5-BL
+HDR-TH-2P-P2.54-V-M= SW1;  % 跳线端子 间距2.54mm
+HDR-TH-2P-P2.54-V-M= SW2;  % 跳线端子 间距2.54mm
+SOT-223         = U1;   % 1117-3.3
+SOP-8           = U2;   % CH340N
+USB-A-TH-C404965= USB_A;% USB 2.0 A 型公头，4 Pin，中间 2 Pin 间距 2.0 mm，两侧 2 Pin 间距 2.54 mm，直插 90° 弯折出线，无前定位柱，短体，兼容 LCSC C404965（首韩 AM90 系列）
+
+NETS
+
+VO        = R5/2 U1/2 ;
+USB_VCC   = D1/1 R2/2 USB_A/1 ;
+USB_P     = U2/1 USB_A/3 ;
+USB_N     = U2/2 USB_A/2 ;
+TXD       = CN1/2 R3/2 U2/6 ;
+RXD       = CN1/3 R4/2 U2/7 ;
+NetR5_1   = R5/1 SW1/1 ;
+NetLED3_1 = LED3/1 R4/1 ;
+NetLED2_1 = LED2/1 R3/1 ;
+NetLED1_1 = LED1/1 R2/1 ;
+NetD1_2   = D1/2 F1/1 ;
+NetC2_1   = C2/1 R1/1 S1/4 ;
+GND       = C5/2 CN1/4 LED1/2 LED2/2 LED3/2 U1/1 U1/4 U2/3 USB_A/4 ;
+BTN       = F1/2 R1/2 ;
+1117      = C1/1 C1/2 C2/2 C3/1 C3/2 S1/1 SW2/1 U1/3 ;
+3.3V      = C4/1 C4/2 C5/1 CN1/1 SW1/2 SW2/2 U2/5 U2/8 ;
